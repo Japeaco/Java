@@ -1,0 +1,55 @@
+package testing;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import project1.Car;
+import project1.SmallCar;
+import project1.LargeCar;
+
+public class CarTest {
+
+	@Test
+	public void testGetRegistration(){
+		SmallCar a = new SmallCar();
+		assertEquals("a0005", a.getRegistration());
+	}
+	
+	@Test
+	public void testRented(){
+		Car a = new SmallCar();
+		assertEquals(false, a.getRented());
+	}
+
+	@Test
+	public void testCapacity() {
+		Car a = new SmallCar();
+		assertEquals(45, a.Capacity());
+	}
+
+	@Test
+	public void testFuelInTank() {
+		Car a = new SmallCar();
+		assertEquals(45, a.getFuelInTank());
+	}
+
+	@Test
+	public void testTankIsFull() {
+		Car a = new SmallCar();
+		assertEquals(true, a.isTankFull());
+	}
+
+	@Test
+	public void testFuel() {
+		Car a = new SmallCar();
+		assertEquals(0, a.addFuel());
+	}
+
+	@Test
+	public void testDrive() {
+		Car a = new SmallCar();
+		assertEquals(0, a.drive(400));
+	}	
+
+}
